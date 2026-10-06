@@ -55,6 +55,6 @@ def charger_tous_les_fichiers(chemin_dossier, bucket=None, mettre_dans_globals=F
             
     return dataframes
 
-
+# il faut remplacer le etiennealpy par votre compte SSP cloud et nommer le fichier de la même manière
 données=charger_tous_les_fichiers("données paris","etiennealpy")
-print(données
+print(données)
