@@ -2,6 +2,7 @@ import os
 import re
 import pandas as pd
 import s3fs
+import numpy as np
 
 def charger_tous_les_fichiers(chemin_dossier, bucket=None, mettre_dans_globals=False):
     if bucket is None:
@@ -56,5 +57,10 @@ def charger_tous_les_fichiers(chemin_dossier, bucket=None, mettre_dans_globals=F
     return dataframes
 
 # il faut remplacer le etiennealpy par votre compte SSP cloud et nommer le fichier de la même manière
-données=charger_tous_les_fichiers("données paris","etiennealpy")
+données=charger_tous_les_fichiers("données paris")
 print(données)
+
+def distance_euclidienne(x1,y1,x2,y2):
+    distance=np.sqrt((x1-x2)**2+(y1-y2)**2)
+    return(distance)
+
